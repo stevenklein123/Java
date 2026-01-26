@@ -3,27 +3,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        
-        int n = s.nextInt();
 
-        if (n <= 1) {
-            System.out.println("Not Prime");
-        } else {
-            boolean isPrime = true;
+        int largest;
+        int number;
 
-            for (int i = 2; i <= n / 2; i++) {
-                if (n % i == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
+        System.out.print("Enter number 1: ");
+        largest = s.nextInt();
 
-            if (isPrime) {
-                System.out.println("Prime");
-            } else {
-                System.out.println("Not Prime");
+        for(int i=1; i < 3; i++){
+            System.out.print("Enter number " + (i + 1) + ": ");
+            number = s.nextInt();
+
+            if(number > largest){
+                largest = number;
             }
         }
+
+        System.out.print("Largest Number : " + largest);
 
         s.close();
     }
