@@ -7,7 +7,7 @@ public class Vowels {
         int vowelCount = 0;
         int consonantCount = 0;
 
-        System.out.print("Enter Wor :");
+        System.out.print("Enter Word :");
         String text = s.nextLine().toLowerCase();
 
         for(int i=0; i < text.length(); i++){
